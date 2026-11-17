@@ -1,16 +1,63 @@
-# React + Vite
+# Job Application Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple home for your job search—built to help you keep application details organized as this project grows.
 
-Currently, two official plugins are available:
+> **Project status:** This repository is currently an early-stage React and Vite starter. Job-tracking features have not been implemented yet.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About
 
-## React Compiler
+The goal of **Job Application Tracker** is to make it easier to follow a job search in one place. The current app is the default starter screen; this README describes the project setup and how to run it locally without suggesting features that are not in the code yet.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the Oxlint configuration
+- **React 19** for the user interface
+- **Vite** for local development and production builds
+- **Oxlint** for linting
+- **JavaScript** and **HTML**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Getting started
+
+### Prerequisites
+
+Install a current version of [Node.js](https://nodejs.org/) and npm. npm is included with Node.js.
+
+### Install and run
+
+```bash
+git clone https://github.com/LESLY16/Job-app-tracker.git
+cd Job-app-tracker
+npm install
+npm run dev
+```
+
+Vite will print a local URL in your terminal (typically `http://localhost:5173`). Open it in your browser to view the app.
+
+## Available commands
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server with hot module replacement. |
+| `npm run build` | Create an optimized production build in `dist/`. |
+| `npm run preview` | Preview the production build locally. Run `npm run build` first. |
+| `npm run lint` | Check the project with Oxlint. |
+
+## Project structure
+
+```text
+Job-app-tracker/
+├── public/             # Static assets
+├── src/                # React application source
+│   ├── App.jsx         # Main app component
+│   └── main.jsx        # React entry point
+├── index.html          # HTML page template
+├── package.json        # Dependencies and scripts
+└── vite.config.js      # Vite configuration
+```
+
+## Contributing
+
+Contributions and ideas are welcome. For substantial changes, open an issue first to discuss the proposal. When submitting a change, please include a clear description and run the relevant checks, such as `npm run lint` and `npm run build`.
+
+## License
+
+No license has been specified for this repository yet. Until one is added, all rights are reserved by the copyright holder.
