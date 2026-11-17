@@ -1,1 +1,38 @@
-export const jobs = [];
+export const mockJobs = [
+  {
+    id: 1,
+    company: "Google",
+    title: "Frontend Developer",
+    location: "Remote",
+    salary: "120000",
+    appliedDate: "2026-11-10",
+    status: "Interview",
+  },
+  {
+    id: 2,
+    company: "Microsoft",
+    title: "React Developer",
+    location: "Bengaluru",
+    salary: "150000",
+    appliedDate: "2026-11-08",
+    status: "Applied",
+  },
+  {
+    id: 3,
+    company: "Amazon",
+    title: "Software Engineer",
+    location: "Hyderabad",
+    salary: "180000",
+    appliedDate: "2026-11-05",
+    status: "Offer",
+  },
+  {
+    id: 4,
+    company: "Infosys",
+    title: "Full Stack Developer",
+    location: "Pune",
+    salary: "90000",
+    appliedDate: "2026-11-01",
+    status: "Rejected",
+  },
+];
