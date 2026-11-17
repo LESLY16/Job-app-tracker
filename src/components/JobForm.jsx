@@ -31,17 +31,13 @@ function JobForm() {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]:
+        e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!formData.company || !formData.title) {
-      alert("Company and Job Title are required");
-      return;
-    }
 
     if (editingJob) {
       updateJob({
@@ -52,9 +48,10 @@ function JobForm() {
       addJob({
         id: Date.now(),
         ...formData,
-        appliedDate: new Date()
-          .toISOString()
-          .split("T")[0],
+        appliedDate:
+          new Date()
+            .toISOString()
+            .split("T")[0],
       });
     }
 
@@ -68,80 +65,70 @@ function JobForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>
+  <form
+    onSubmit={handleSubmit}
+    className="bg-white rounded-2xl shadow-lg p-6 sticky top-5"
+  > 
+      <h2 className="text-2xl font-bold mb-4">
         {editingJob
           ? "Edit Job"
-          : "Add Job"}
+          : "Add New Job"}
       </h2>
 
-      <input
-        type="text"
-        name="company"
-        placeholder="Company"
-        value={formData.company}
-        onChange={handleChange}
-      />
+      <div className="grid md:grid-cols-2 gap-4">
+        <input
+          type="text"
+          name="company"
+          placeholder="Company Name"
+          value={formData.company}
+          onChange={handleChange}
+          className="w-full border border-gray-300 rounded-xl p-3"
+        />
 
-      <br />
-      <br />
+        <input
+          type="text"
+          name="title"
+          placeholder="Job Title"
+          value={formData.title}
+          onChange={handleChange}
+          className="w-full border border-gray-300 rounded-xl p-3"
+        />
 
-      <input
-        type="text"
-        name="title"
-        placeholder="Job Title"
-        value={formData.title}
-        onChange={handleChange}
-      />
+        <input
+          type="text"
+          name="location"
+          placeholder="Location"
+          value={formData.location}
+          onChange={handleChange}
+          className="w-full border border-gray-300 rounded-xl p-3"
+        />
 
-      <br />
-      <br />
+        <input
+          type="number"
+          name="salary"
+          placeholder="Salary"
+          value={formData.salary}
+          onChange={handleChange}
+          className="w-full border border-gray-300 rounded-xl p-3"
+        />
 
-      <input
-        type="text"
-        name="location"
-        placeholder="Location"
-        value={formData.location}
-        onChange={handleChange}
-      />
+        <select
+          name="status"
+          value={formData.status}
+          onChange={handleChange}
+          className="w-full border border-gray-300 rounded-xl p-3"
+        >
+          <option value="Applied">Applied</option>
+          <option value="Interview">Interview</option>
+          <option value="Offer">Offer</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+      </div>
 
-      <br />
-      <br />
-
-      <input
-        type="number"
-        name="salary"
-        placeholder="Salary"
-        value={formData.salary}
-        onChange={handleChange}
-      />
-
-      <br />
-      <br />
-
-      <select
-        name="status"
-        value={formData.status}
-        onChange={handleChange}
+      <button
+        type="submit"
+        className="mt-4 w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 font-semibold"
       >
-        <option value="Applied">
-          Applied
-        </option>
-        <option value="Interview">
-          Interview
-        </option>
-        <option value="Offer">
-          Offer
-        </option>
-        <option value="Rejected">
-          Rejected
-        </option>
-      </select>
-
-      <br />
-      <br />
-
-      <button type="submit">
         {editingJob
           ? "Update Job"
           : "Add Job"}
