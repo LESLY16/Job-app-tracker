@@ -1,69 +1,87 @@
-# Job Application Tracker
+<div align="center">
 
-A React application created with Vite. The repository currently contains the Vite/React starter screen; job application tracking features are not implemented yet.
+# 💼 Job Application Tracker
 
-## Project structure
+**Your job search, organized.**
 
-```text
-Job-app-tracker/
-├── public/
-│   ├── favicon.svg
-│   └── icons.svg
-├── src/
-│   ├── App.jsx
-│   └── main.jsx
-├── .gitignore
-├── .oxlintrc.json
-├── index.html
-├── package-lock.json
-├── package.json
-└── vite.config.js
-```
+Keep applications, interviews, and offers in one simple dashboard—so you can focus on finding your next opportunity.
 
-> **Note:** `src/App.jsx` and `src/main.jsx` currently import stylesheets and image assets that are not present in the repository's `src/` directory (`App.css`, `index.css`, and files under `src/assets/`). Restore those files or update the imports before expecting the app to build successfully.
+[![React](https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)](https://vite.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06b6d4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ESM-f7df1e?logo=javascript&logoColor=222)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## Tech stack
+</div>
 
-- React 19
-- Vite
-- JavaScript and JSX
-- Oxlint
+---
 
-## Getting started
+## ✨ About
+
+Job Application Tracker is a lightweight React app for keeping the details of your job hunt together. Add opportunities as you apply, update them as things progress, and get a quick snapshot of your pipeline from the dashboard.
+
+## 🚀 Features
+
+- **At-a-glance dashboard** with total applications and counts by status
+- **Track the details** that matter: company, role, location, salary, application date, and status
+- **Add, edit, and delete** application records
+- **Search and filter** your list by keyword and application status
+- **Local persistence** with browser `localStorage`—your changes stay available on the same browser
+- **Sample opportunities** included to help you explore the interface
+- **Responsive layout** built with Tailwind CSS
+
+### Application statuses
+
+`Applied` · `Interview` · `Offer` · `Rejected`
+
+## 🧰 Built with
+
+- [React 19](https://react.dev/) and [Vite](https://vite.dev/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [Lucide React](https://lucide.dev/) icons
+- [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) for linting
+
+## 🏁 Get started
 
 ### Prerequisites
 
 Install [Node.js](https://nodejs.org/) and npm.
 
-### Install dependencies
+### Install and run
 
 ```bash
 git clone https://github.com/LESLY16/Job-app-tracker.git
 cd Job-app-tracker
 npm install
-```
-
-### Run the development server
-
-```bash
 npm run dev
 ```
 
-Vite prints a local URL in the terminal (usually `http://localhost:5173`). Open it in your browser to view the app. If the missing imported styles/assets have not been restored, Vite may report module resolution errors.
+Open the local URL printed by Vite in your terminal to use the app.
 
-## Available scripts
+## 📜 Available commands
 
 | Command | Description |
 | --- | --- |
-| `npm run dev` | Start the Vite development server. |
-| `npm run build` | Build the app for production into `dist/`. |
-| `npm run preview` | Preview a production build locally. Run `npm run build` first. |
-| `npm run lint` | Run Oxlint. |
+| `npm run dev` | Start the local development server. |
+| `npm run build` | Create a production build in `dist/`. |
+| `npm run preview` | Preview the production build locally. Run the build first. |
+| `npm run lint` | Check the project with Oxlint. |
 
-## Contributing
+## 💾 Your data
 
-Contributions and ideas are welcome. For substantial changes, open an issue to discuss the proposal. Please include a clear description of your changes and run the relevant checks before submitting a pull request.
+Application records are saved in the browser's `localStorage`. They are specific to the browser and device you use; this project does not currently sync data to a server or provide account-based backups. Clearing the browser's site data will remove saved records.
 
-## License
+## 🤝 Contributing
 
-No license has been specified for this repository. Until a license is added, all rights are reserved by the copyright holder.
+Ideas and improvements are welcome! Open an issue to discuss a substantial change, or submit a pull request with a clear description of what you changed. Please run the relevant checks before submitting.
+
+## 📄 License
+
+No license has been specified yet. All rights are reserved by the repository owner unless a license is added.
+
+---
+
+<div align="center">
+
+Made to make the job hunt a little more manageable. 🌱
+
+</div>
